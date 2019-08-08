@@ -125,7 +125,7 @@ class Model
 	}
 	
 	public int evaluateAction(int action, int depth){
-		if(depth == 5){
+		if(depth == 3){
 			int[] a = {1000,1000,1000,1000,1000};
 			boolean[] orient = new boolean[5];
 			int i = 0;
@@ -170,13 +170,13 @@ class Model
 						m.onRightClick();
 			}
 			m.update();
-			if(depth % 15 == 0){
+			if(depth % 21 == 0){
 				depth++;
 				int v1 = 0;
 				int v2 = 0;
 				int v3 = 0;
 				int v4 = 0;
-				v1 = m.evaluateAction(1,depth);
+				v1 = m.evaluateAction(3,depth);
 				v2 = m.evaluateAction(2,depth);
 				v3 = m.evaluateAction(3,depth);
 				v4 = m.evaluateAction(4,depth);
